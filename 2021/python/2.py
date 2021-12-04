@@ -36,10 +36,10 @@ def part_1(inputs: Sequence[int]) -> Sequence[int]:
         else:
             raise ValueError(f"Unexpected direction {dir}")
         pos[index] += value
-    return pos
+    return pos[0] * pos[1]
 
 
-assert part_1(test_inputs) == [15, 10]
+assert part_1(test_inputs) == 15 * 10
 
 inputs = process_inputs(read_input("../inputs/2.txt"))
 print(part_1(inputs))
@@ -57,8 +57,8 @@ def part_2(inputs: Sequence[int]) -> Sequence[int]:
             continue
         pos[0] += value
         pos[1] += aim * value
-    return pos
+    return pos[0] * pos[1]
 
 
-assert part_2(test_inputs) == [15, 60]
+assert part_2(test_inputs) == 15 * 60
 print(part_2(inputs))
