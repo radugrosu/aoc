@@ -41,7 +41,7 @@ def part_1(inputs: Sequence[int]) -> Sequence[int]:
 
 assert part_1(test_inputs) == [15, 10]
 
-inputs = process_inputs(read_input("./inputs/2.txt"))
+inputs = process_inputs(read_input("../inputs/2.txt"))
 print(part_1(inputs))
 
 

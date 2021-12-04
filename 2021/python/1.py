@@ -15,7 +15,7 @@ test_inputs = """
 263""".strip().splitlines()
 
 test_inputs = [int(item.strip()) for item in test_inputs]
-inputs = [int(item) for item in read_input("./inputs/1.txt")]
+inputs = [int(item) for item in read_input("../inputs/1.txt")]
 
 
 def part_1(inputs: Sequence[int]) -> int:
@@ -27,6 +27,7 @@ def part_1(inputs: Sequence[int]) -> int:
 
 
 assert part_1(test_inputs) == 7
+print(part_1(inputs))
 
 
 def part_2(inputs: Sequence[int]) -> int:
@@ -39,3 +40,4 @@ def part_2(inputs: Sequence[int]) -> int:
 
 
 assert part_2(test_inputs) == 5
+print(part_2(inputs))
