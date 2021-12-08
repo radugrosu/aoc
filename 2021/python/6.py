@@ -34,6 +34,17 @@ def fish_evolution(initial_age: int, evolve_for: int) -> int:
         return fish_evolution(initial_age - 1, evolve_for - 1)
 
 
+def fish_evolution_cached(initial_age: int, evolve_for: int) -> int:
+    cache = {(i, 0): 1 for i in range(9)}
+    for d in range(1, evolve_for + 1):
+        for a in range(9):
+            if a == 0:
+                cache[a, d] = cache[6, d - 1] + cache[8, d - 1]
+            else:
+                cache[a, d] = cache[a - 1, d - 1]
+    return cache[initial_age, evolve_for]
+
+
 def part_1(inputs, evolve_for: int = 80):
     return sum(fish_evolution(i, evolve_for) for i in inputs)
 
