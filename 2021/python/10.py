@@ -54,7 +54,6 @@ def part_2(input: Sequence[str]):
         chars = complete_line(line)
         if chars is not None:
             scores.append(score_completed_line(chars))
-    print(sorted(scores))
     return sorted(scores)[len(scores) // 2]
 
 
@@ -62,5 +61,5 @@ test_inputs = read_input("/home/radu/repos/aoc/2021/inputs/10_test.txt")
 real_inputs = read_input("/home/radu/repos/aoc/2021/inputs/10.txt")
 assert part_1(test_inputs) == 26397
 print(part_1(real_inputs))
-# assert part_2(test_inputs) == 288957
+assert part_2(test_inputs) == 288957
 print(part_2(real_inputs))
