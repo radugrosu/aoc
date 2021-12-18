@@ -1,5 +1,6 @@
 from collections import Counter, defaultdict
 from typing import Mapping, Sequence, Set
+import time
 
 
 def read_input(path: str):
@@ -52,4 +53,5 @@ real_inputs = read_input("/home/radu/repos/aoc/2021/inputs/12.txt")
 assert part_1(test_inputs) == 10
 print(part_1(real_inputs))
 assert part_2(test_inputs) == 36
-print(part_2(real_inputs))
+start = time.time()
+print(part_2(real_inputs), "took", time.time() - start, "s")
